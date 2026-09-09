@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Software Engineer</title>
+<meta name="description" content="Portfolio of Your Name, a software engineer building [what you build].">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#top">Skip to content</a>
+
+<header class="site-nav">
+  <a href="#top" class="site-nav__name">Your Name</a>
+  <button class="site-nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+    <span class="sr-only">Menu</span>
+  </button>
+  <nav id="navLinks" class="site-nav__links">
+    <a href="#work">Log</a>
+    <a href="#stack">Tools</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="top" class="hero">
+    <p class="hero__status">
+      <span class="hero__dot" aria-hidden="true"></span>
+      on main, currently building <a href="#work">[current project]</a>
+    </p>
+    <h1 class="hero__headline">I build [what you build — e.g. tools that make messy data usable].</h1>
+    <p class="hero__lede">
+      Your Name is a software engineer based in [City, Country], working mostly with
+      [primary domain, e.g. distributed systems / web platforms / developer tools].
+      This is a placeholder bio — swap it for two or three sentences about what you
+      actually work on and what kind of problems you like solving.
+    </p>
+    <div class="hero__links">
+      <a href="mailto:you@example.com">Email</a>
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="resume.pdf">Résumé</a>
+    </div>
+  </section>
+
+  <section id="work" class="log">
+    <h2 class="section-heading">Log</h2>
+    <p class="section-intro">A running record of things I've shipped, roughly in the order I shipped them.</p>
+
+    <ol class="log-list">
+
+      <li class="log-entry">
+        <span class="log-entry__node" aria-hidden="true"></span>
+        <p class="log-entry__date"><time datetime="2026">2026, ongoing</time></p>
+        <h3 class="log-entry__title">Project One</h3>
+        <p class="log-entry__body">
+          One or two sentences on the actual problem this solved and the approach you took —
+          specific enough that a stranger understands what it does in ten seconds.
+        </p>
+        <p class="log-entry__meta">Built with [Language], [Framework], [Datastore]</p>
+        <a class="log-entry__link" href="#">View project</a>
+      </li>
+
+      <li class="log-entry">
+        <span class="log-entry__node" aria-hidden="true"></span>
+        <p class="log-entry__date"><time datetime="2025">2025</time></p>
+        <h3 class="log-entry__title">Project Two</h3>
+        <p class="log-entry__body">
+          What it does, who it was for (yourself, a client, an open source community),
+          and the one decision you'd explain if someone asked "why did you build it that way?"
+        </p>
+        <p class="log-entry__meta">Built with [Language], [Framework]</p>
+        <a class="log-entry__link" href="#">View project</a>
+      </li>
+
+      <li class="log-entry">
+        <span class="log-entry__node" aria-hidden="true"></span>
+        <p class="log-entry__date"><time datetime="2024">2024</time></p>
+        <h3 class="log-entry__title">Project Three</h3>
+        <p class="log-entry__body">
+          Keep this one honest too — a smaller side project is fine if the write-up
+          shows real thinking rather than a polished pitch.
+        </p>
+        <p class="log-entry__meta">Built with [Language], [Tool]</p>
+        <a class="log-entry__link" href="#">View project</a>
+      </li>
+
+    </ol>
+  </section>
+
+  <section id="stack" class="stack">
+    <h2 class="section-heading">Tools</h2>
+    <p class="section-intro">
+      What I reach for most, and why — not an exhaustive list, just what's actually load-bearing.
+    </p>
+    <ul class="stack-list">
+      <li>Language</li>
+      <li>Language</li>
+      <li>Framework</li>
+      <li>Framework</li>
+      <li>Database</li>
+      <li>Infra / cloud</li>
+      <li>Editor</li>
+      <li>Testing</li>
+    </ul>
+  </section>
+
+  <section id="experience" class="experience">
+    <h2 class="section-heading">Experience</h2>
+    <ul class="experience-list">
+      <li class="experience-entry">
+        <div class="experience-entry__role">
+          <h3>Job Title</h3>
+          <p>Company Name</p>
+        </div>
+        <p class="experience-entry__dates"><time>2024</time> — Present</p>
+        <p class="experience-entry__blurb">
+          One line on scope and one concrete outcome you're proud of.
+        </p>
+      </li>
+      <li class="experience-entry">
+        <div class="experience-entry__role">
+          <h3>Job Title</h3>
+          <p>Company Name</p>
+        </div>
+        <p class="experience-entry__dates"><time>2022</time> — <time>2024</time></p>
+        <p class="experience-entry__blurb">
+          Same idea — what you owned, and what changed because you were there.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-heading">Get in touch</h2>
+    <p class="section-intro">
+      Open to [what you're open to — roles, freelance work, collaborating on something specific].
+      The fastest way to reach me is email.
+    </p>
+    <a class="contact__email" href="mailto:you@example.com">you@example.com</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Your Name, built with plain HTML and hosted on GitHub Pages. <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
