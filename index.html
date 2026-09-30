@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -35,7 +35,7 @@
   <section id="top" class="hero">
     <p class="hero__status">
       <span class="hero__dot" aria-hidden="true"></span>
-      on main, currently building <a href="#work">[FigureDraw]</a>
+      on main, just shipped <a href="#work">FigureDraw</a>
     </p>
     <h1 class="hero__headline">Hello.</h1>
     <p class="hero__lede">
@@ -55,45 +55,70 @@
 
     <ol class="log-list">
 
-      <li class="log-entry log-entry--wip">
+      <li class="log-entry">
         <span class="log-entry__node" aria-hidden="true"></span>
-        <p class="log-entry__date">In progress</p>
         <h3 class="log-entry__title">FigureDraw</h3>
+        <figure class="log-entry__shot">
+          <img src="img/figuredraw.jpg" width="1400" height="875" loading="lazy"
+               alt="FigureDraw mid-session: a timer and pose counter above a gesture sketch of a dancer, with the reference photo on the right.">
+        </figure>
         <p class="log-entry__body">
-          [One or two sentences on what it does and how you built it.]
+          A free, in-browser studio for timed figure-drawing practice. Load your own reference photos,
+          run gesture or class-style sessions, and draw on separate gesture, structure, tone and contour
+          layers with pencil, ink and charcoal brushes, then export the result as a PNG or layered ZIP.
         </p>
-        <p class="log-entry__meta">Built with [Language], [Framework]</p>
-        <a class="log-entry__link" href="#">View project</a>
+        <p class="log-entry__meta">Built with HTML, CSS, JavaScript (Canvas API)</p>
+        <p class="log-entry__links">
+          <a class="log-entry__link" href="https://iahmed20.github.io/FigureDraw/" target="_blank" rel="noopener">Try it live</a>
+          <a class="log-entry__link" href="https://github.com/iahmed20/FigureDraw" target="_blank" rel="noopener">Source</a>
+        </p>
       </li>
 
       <li class="log-entry">
         <span class="log-entry__node" aria-hidden="true"></span>
         <h3 class="log-entry__title">BrokeragePlatform</h3>
+        <figure class="log-entry__shot">
+          <img src="img/brokerage-platform.jpg" width="1400" height="794" loading="lazy"
+               alt="BrokeragePlatform dashboard: a candlestick chart for the MEOW ticker beside a Python strategy editor.">
+        </figure>
         <p class="log-entry__body">
-          [One or two sentences on what it does and how you built it.]
+          A simulated brokerage where you open an account, trade a small market of stocks and write Python
+          scripts that trade for you. An ASP.NET Core API runs the price feed, order matching and a
+          double-entry ledger, and a React front end shows live candlestick charts next to a code editor.
         </p>
-        <p class="log-entry__meta">Built with [Language], [Framework]</p>
-        <a class="log-entry__link" href="#">View project</a>
+        <p class="log-entry__meta">Built with C#, ASP.NET Core, EF Core, PostgreSQL, React, Vite</p>
+        <p class="log-entry__links">
+          <a class="log-entry__link" href="https://github.com/iahmed20/BrokeragePlatform" target="_blank" rel="noopener">Backend source</a>
+          <a class="log-entry__link" href="https://github.com/iahmed20/vite-frontend" target="_blank" rel="noopener">Frontend source</a>
+        </p>
       </li>
 
       <li class="log-entry">
         <span class="log-entry__node" aria-hidden="true"></span>
         <h3 class="log-entry__title">AutoWiki</h3>
         <p class="log-entry__body">
-          [One or two sentences on what it does and how you built it.]
+          Generates Wikipedia-style long-form articles, adapted from Stanford's STORM method. It creates
+          expert personas, has each one interview a web-searching agent, stores what it finds in a vector
+          database, then outlines and writes each section from that research.
         </p>
-        <p class="log-entry__meta">Built with [Language], [Framework]</p>
-        <a class="log-entry__link" href="#">View project</a>
+        <p class="log-entry__meta">Built with Python, LangGraph, LangChain, OpenAI API, Chroma</p>
+        <a class="log-entry__link" href="https://github.com/iahmed20/AutoWiki" target="_blank" rel="noopener">Source</a>
       </li>
 
       <li class="log-entry">
         <span class="log-entry__node" aria-hidden="true"></span>
         <h3 class="log-entry__title">SubleaseU</h3>
+        <figure class="log-entry__shot">
+          <img src="img/subleaseu.jpg" width="1400" height="875" loading="lazy"
+               alt="SubleaseU listings page: rent and room filters above cards for sublease listings near campus.">
+        </figure>
         <p class="log-entry__body">
-          [One or two sentences on what it does and how you built it.]
+          A team-built app for UIUC students to post and find subleases. Listings can be filtered by rent,
+          bedrooms and bathrooms, posting is limited to @illinois.edu accounts, and renters can message
+          the person who posted a listing.
         </p>
-        <p class="log-entry__meta">Built with [Language], [Framework]</p>
-        <a class="log-entry__link" href="#">View project</a>
+        <p class="log-entry__meta">Built with React, Flask, MongoDB, Firebase Auth</p>
+        <a class="log-entry__link" href="https://github.com/iahmed20/SubleaseU" target="_blank" rel="noopener">Source</a>
       </li>
 
     </ol>
@@ -105,21 +130,32 @@
       <li class="log-entry">
         <span class="log-entry__node" aria-hidden="true"></span>
         <h3 class="log-entry__title">Authorship Attribution</h3>
+        <figure class="log-entry__shot">
+          <img src="img/authorship-attribution.jpg" width="1400" height="787" loading="lazy"
+               alt="Title slide: Authorship Attribution with Burrows Delta and Nearest Centroid Classifier.">
+        </figure>
         <p class="log-entry__body">
-          [One or two sentences on what it does and how you built it.]
+          CS 410 final project with Andrew and Abhnil. We scraped books from Project Gutenberg and
+          identified their authors from writing style, using Burrows' Delta and a nearest-centroid classifier.
         </p>
-        <p class="log-entry__meta">Built with Python</p>
-        <a class="log-entry__link" href="#">View project</a>
+        <p class="log-entry__meta">Built with Python, pandas, NumPy, Jupyter</p>
+        <a class="log-entry__link" href="https://github.com/iahmed20/Authorship_Attribution" target="_blank" rel="noopener">Source</a>
       </li>
 
       <li class="log-entry">
         <span class="log-entry__node" aria-hidden="true"></span>
         <h3 class="log-entry__title">BERT: Gendered Discourse Marker Usage</h3>
+        <figure class="log-entry__shot log-entry__shot--paper">
+          <img src="img/bert-discourse-markers.jpg" width="1000" height="821" loading="lazy"
+               alt="First page of the paper 'Gendered differences in DMs w/BERT' by Ilsa Ahmed, showing the abstract.">
+        </figure>
         <p class="log-entry__body">
-          [One or two sentences on what it does and how you built it.]
+          A study of whether BERT picks up gendered patterns in discourse markers like "like", "uh" and
+          "you know". I fine-tuned BERT on the Spoken BNC 2014 corpus to predict speaker gender, then compared
+          it with out-of-the-box BERT and a logistic regression baseline and analyzed where each one went wrong.
         </p>
-        <p class="log-entry__meta">Built with Python, BERT</p>
-        <a class="log-entry__link" href="#">View project</a>
+        <p class="log-entry__meta">Built with Python, BERT (Hugging Face Transformers), scikit-learn</p>
+        <a class="log-entry__link" href="https://github.com/iahmed20/DMs-w-BERT" target="_blank" rel="noopener">Source &amp; paper</a>
       </li>
 
       <li class="log-entry">
@@ -129,7 +165,6 @@
           [One or two sentences on what it does and how you built it.]
         </p>
         <p class="log-entry__meta">Built with Python</p>
-        <a class="log-entry__link" href="#">View project</a>
       </li>
 
     </ol>
