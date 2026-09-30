@@ -191,8 +191,12 @@ main::before {
 }
 
 /* ---------- layout helpers ---------- */
+/* Space sits only above each section, so neighbours don't stack two paddings into one big gap. */
 main > section {
-  padding: clamp(3.5rem, 8vw, 6rem) var(--page-pad);
+  padding: clamp(2.75rem, 5vw, 4rem) var(--page-pad) 0;
+}
+main > section:last-child {
+  padding-bottom: clamp(3rem, 6vw, 4.5rem);
 }
 
 .section-heading {
@@ -209,7 +213,7 @@ main > section {
 /* ---------- hero ---------- */
 .hero {
   max-width: 42rem;
-  padding-top: clamp(4rem, 12vw, 7rem) !important;
+  padding-top: clamp(3rem, 8vw, 5rem) !important;
 }
 
 .hero__status {
@@ -378,23 +382,53 @@ main > section {
 }
 
 /* ---------- stack ---------- */
+/* full sheet width so each group mostly fits on one row */
 .stack {
-  max-width: 40rem;
+  max-width: none;
+}
+
+.stack-groups {
+  display: grid;
+  gap: 1.1rem;
+}
+
+/* label on the left, chips on the right; stacks on narrow screens */
+.stack-group {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  column-gap: 1.25rem;
+  align-items: start;
+}
+
+.stack-group__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  line-height: 2.1rem; /* same height as a chip, so the label centres on the first row */
+}
+
+@media (max-width: 560px) {
+  .stack-groups { gap: 1.4rem; }
+  .stack-group { grid-template-columns: 1fr; row-gap: 0.5rem; }
+  .stack-group__label { line-height: 1.3; }
 }
 
 .stack-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem 0.75rem;
+  gap: 0.5rem 0.6rem;
   margin: 0;
   padding: 0;
 }
 
 .stack-list li {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.7rem;
   border: 1px solid var(--rule);
   border-radius: 2px;
   background: var(--paper-soft);
