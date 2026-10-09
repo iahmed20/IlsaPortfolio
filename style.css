@@ -117,7 +117,8 @@ a {
 }
 
 .site-nav__links a:hover,
-.site-nav__links a:focus-visible {
+.site-nav__links a:focus-visible,
+.site-nav__links a[aria-current="page"] {
   color: var(--ink);
   border-bottom-color: var(--accent);
 }
@@ -511,6 +512,95 @@ main > section:last-child {
 .contact__email:focus-visible {
   color: var(--accent);
   border-bottom-color: var(--accent);
+}
+
+/* ---------- art page ---------- */
+.art-intro {
+  max-width: 42rem;
+  padding-top: clamp(3rem, 8vw, 5rem) !important;
+}
+
+.art-intro__headline {
+  font-size: clamp(2.1rem, 5vw, 3.2rem);
+  letter-spacing: -0.01em;
+}
+
+/* pieces keep their own proportions; wide pieces span the full row */
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 0 1.25rem;
+  align-items: start;
+}
+.art-piece--wide {
+  grid-column: 1 / -1;
+}
+.art-intro + .art-section {
+  padding-top: 2.5rem;
+}
+
+.art-piece {
+  margin: 0 0 1.5rem;
+}
+
+.art-piece__frame {
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--paper-soft);
+  box-shadow: 0 1px 2px rgba(34, 30, 25, 0.06), 0 8px 24px -12px rgba(34, 30, 25, 0.25);
+}
+.art-piece__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+a.art-piece__frame:hover img,
+a.art-piece__frame:focus-visible img {
+  transform: scale(1.02);
+}
+
+.art-piece__strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.art-piece__strip--4 {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 0;
+}
+.art-piece__strip--2 {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 0;
+}
+@media (max-width: 560px) {
+  .art-piece__strip--4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+.art-piece__link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+}
+.art-piece__link:hover,
+.art-piece__link:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.art-piece__caption {
+  margin-top: 0.55rem;
+  font-size: 0.9rem;
+}
+.art-piece__caption span {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
 }
 
 /* ---------- footer ---------- */
