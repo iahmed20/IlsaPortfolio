@@ -35,7 +35,7 @@
   <section id="top" class="hero">
     <p class="hero__status">
       <span class="hero__dot" aria-hidden="true"></span>
-      on main, just shipped <a href="#work">FigureDraw</a>
+      on main, just made <a href="#work">FigureDraw</a>
     </p>
     <h1 class="hero__headline">Hello.</h1>
     <p class="hero__lede">
@@ -51,7 +51,7 @@
 
   <section id="work" class="log">
     <h2 class="section-heading">Log</h2>
-    <p class="section-intro">A running record of things I've shipped, roughly in the order I shipped them.</p>
+    <p class="section-intro">A running record of things I've made, roughly in the order I made them.</p>
 
     <ol class="log-list">
 
@@ -76,19 +76,24 @@
 
       <li class="log-entry">
         <span class="log-entry__node" aria-hidden="true"></span>
-        <h3 class="log-entry__title">BrokeragePlatform</h3>
+        <h3 class="log-entry__title">Stock Bot Battle</h3>
         <figure class="log-entry__shot">
-          <img src="img/brokerage-platform.jpg" width="1400" height="794" loading="lazy"
-               alt="BrokeragePlatform dashboard: a candlestick chart for the MEOW ticker beside a Python strategy editor.">
+          <img src="img/stock-bot-battle-1.jpg" width="1400" height="1038" loading="lazy"
+               alt="Stock Bot Battle: a candlestick chart for the MEOW ticker beside a Python strategy editor, with a running bot's log printing z-scores and a BUY order.">
+        </figure>
+        <figure class="log-entry__shot">
+          <img src="img/stock-bot-battle-2.jpg" width="1400" height="1115" loading="lazy"
+               alt="Stock Bot Battle competition panel: a live round with time remaining, a Join button for the next round, and a leaderboard ranking players by equity.">
         </figure>
         <p class="log-entry__body">
-          A simulated brokerage where you open an account, trade a small market of stocks and write Python
-          scripts that trade for you. An ASP.NET Core API runs the price feed, order matching and a
-          double-entry ledger, and a React front end shows live candlestick charts next to a code editor.
+          A multiplayer stock market where players write Python trading bots and compete in timed rounds.
+          Everyone starts with the same cash, bots trade five cat-themed stocks against each other and a house
+          market maker, and a live leaderboard ranks players by equity. Bots run in locked-down Docker
+          sandboxes, and every trade is recorded in an append-only ledger.
         </p>
         <p class="log-entry__meta">Built with C#, ASP.NET Core, EF Core, PostgreSQL, React, Vite</p>
         <p class="log-entry__links">
-          <a class="log-entry__link" href="https://github.com/iahmed20/BrokeragePlatform" target="_blank" rel="noopener">Backend source</a>
+          <a class="log-entry__link" href="https://github.com/iahmed20/StockBotBattle" target="_blank" rel="noopener">Backend source</a>
           <a class="log-entry__link" href="https://github.com/iahmed20/vite-frontend" target="_blank" rel="noopener">Frontend source</a>
         </p>
       </li>
@@ -113,7 +118,7 @@
                alt="SubleaseU listings page: rent and room filters above cards for sublease listings near campus.">
         </figure>
         <p class="log-entry__body">
-          A team-built app for UIUC students to post and find subleases. Listings can be filtered by rent,
+          An app for UIUC students to post and find subleases. Listings can be filtered by rent,
           bedrooms and bathrooms, posting is limited to @illinois.edu accounts, and renters can message
           the person who posted a listing.
         </p>
@@ -135,8 +140,8 @@
                alt="Title slide: Authorship Attribution with Burrows Delta and Nearest Centroid Classifier.">
         </figure>
         <p class="log-entry__body">
-          CS 410 final project with Andrew and Abhnil. We scraped books from Project Gutenberg and
-          identified their authors from writing style, using Burrows' Delta and a nearest-centroid classifier.
+          Scrapes books from Project Gutenberg and
+          identifies their authors from writing style, using Burrows' Delta and a nearest-centroid classifier.
         </p>
         <p class="log-entry__meta">Built with Python, pandas, NumPy, Jupyter</p>
         <a class="log-entry__link" href="https://github.com/iahmed20/Authorship_Attribution" target="_blank" rel="noopener">Source</a>
